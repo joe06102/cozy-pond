@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#efe9dd" />
+    <meta name="description" content="A little pond, a quiet afternoon. Make a duck, draw a journey, and take your time." />
+    <title>Cozy Pond</title>
+    <script type="module" crossorigin src="/cozy-pond/assets/index-CMwpu7v0.js"></script>
+    <link rel="modulepreload" crossorigin href="/cozy-pond/assets/three-BcU2926k.js">
+    <link rel="modulepreload" crossorigin href="/cozy-pond/assets/scene-tools-DlQPfYHQ.js">
+    <link rel="stylesheet" crossorigin href="/cozy-pond/assets/index-D8SufhYX.css">
+  </head>
+  <body>
+    <main id="pond" aria-label="Cozy Pond — interactive miniature pond"></main>
+    <div id="grain" aria-hidden="true"></div>
+    <div id="selection" aria-hidden="true"><i></i><i></i><i></i><i></i><span id="dimensions"></span></div>
+    <nav id="toolbar" aria-label="Duck actions" inert>
+      <button data-action="feed">Dabble</button>
+      <button data-action="preen">Preen</button>
+      <button data-action="fly">Fly</button>
+      <button data-action="duckling">Ducklings</button>
+      <span class="divider"></span>
+      <button data-action="undo" class="icon" aria-label="Undo" title="Undo (⌘/Ctrl Z)"><svg viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1.8 8M4 4v6h6"/></svg></button>
+      <button data-action="redo" class="icon" aria-label="Redo" title="Redo (⌘/Ctrl Shift Z)"><svg viewBox="0 0 24 24"><path d="M20 10a8 8 0 1 0-1.8 8M20 4v6h-6"/></svg></button>
+      <span class="divider"></span>
+      <button data-action="duplicate" class="icon" aria-label="Duplicate duck" title="Duplicate (⌘/Ctrl D)"><svg viewBox="0 0 24 24"><path d="M8 8h12v12H8zM4 16V4h12"/></svg></button>
+      <button data-action="delete" class="icon" aria-label="Delete duck" title="Delete"><svg viewBox="0 0 24 24"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7M14 10v7"/></svg></button>
+    </nav>
+    <p id="hint">Click to make a duck · Drag to draw a little journey</p>
+    <button id="help" aria-label="Show controls" title="Show controls">?</button>
+    <aside id="instructions" hidden>
+      <strong>A quiet afternoon.</strong>
+      <p>Click the water or grass to make a duck. Drag to draw its journey. Click a duck to spend a little time together.</p>
+      <p>Esc · Deselect<br>⌘ / Ctrl Z · Undo<br>⌘ / Ctrl Shift Z · Redo<br>Delete · Remove selected duck</p>
+      <button id="close-help">Back to the pond</button>
+    </aside>
+    <div id="announcement" role="status" aria-live="polite"></div>
+  </body>
+</html>
