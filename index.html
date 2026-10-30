@@ -6,15 +6,20 @@
     <meta name="theme-color" content="#efe9dd" />
     <meta name="description" content="A little pond, a quiet afternoon. Make a duck, draw a journey, and take your time." />
     <title>Cozy Pond</title>
-    <script type="module" crossorigin src="/cozy-pond/assets/index-nMM6R3TH.js"></script>
+    <script type="module" crossorigin src="/cozy-pond/assets/index-Hl5MW5GS.js"></script>
     <link rel="modulepreload" crossorigin href="/cozy-pond/assets/three-DkETt2PT.js">
     <link rel="modulepreload" crossorigin href="/cozy-pond/assets/scene-tools-98srCagp.js">
-    <link rel="stylesheet" crossorigin href="/cozy-pond/assets/index-D8SufhYX.css">
+    <link rel="stylesheet" crossorigin href="/cozy-pond/assets/index-C0dC3nHt.css">
   </head>
   <body>
     <main id="pond" aria-label="Cozy Pond — interactive miniature pond"></main>
     <div id="grain" aria-hidden="true"></div>
     <div id="selection" aria-hidden="true"><i></i><i></i><i></i><i></i><span id="dimensions"></span></div>
+    <aside id="care-task" lang="zh-CN" aria-label="随手照顾">
+      <span class="care-caption">随手照顾 · 慢慢来</span>
+      <p id="care-task-text"></p>
+      <div id="care-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+    </aside>
     <nav id="toolbar" aria-label="Duck actions" inert>
       <button data-action="feed">Dabble</button>
       <button data-action="preen">Preen</button>
@@ -26,12 +31,14 @@
       <span class="divider"></span>
       <button data-action="duplicate" class="icon" aria-label="Duplicate duck" title="Duplicate (⌘/Ctrl D)"><svg viewBox="0 0 24 24"><path d="M8 8h12v12H8zM4 16V4h12"/></svg></button>
       <button data-action="delete" class="icon" aria-label="Delete duck" title="Delete"><svg viewBox="0 0 24 24"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7M14 10v7"/></svg></button>
+      <output id="duck-care" lang="zh-CN" aria-label="鸭子状态" aria-live="off"></output>
     </nav>
     <p id="hint">Click to make a duck · Drag to draw a little journey</p>
     <button id="help" aria-label="Show controls" title="Show controls">?</button>
     <aside id="instructions" hidden>
       <strong>A quiet afternoon.</strong>
       <p>Click the water or grass to make a duck. Drag to draw its journey. Click a duck to spend a little time together.</p>
+      <p lang="zh-CN">Dabble（水中觅食）/ Nibble（岸上啄食）结束后，鸭子会吃饱一点。肚子饿了会游得稍慢；随手照顾就好，不用赶时间。</p>
       <p>Esc · Deselect<br>⌘ / Ctrl Z · Undo<br>⌘ / Ctrl Shift Z · Redo<br>Delete · Remove selected duck</p>
       <button id="close-help">Back to the pond</button>
     </aside>
